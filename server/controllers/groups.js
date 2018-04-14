@@ -1,5 +1,3 @@
-const { createMsg } = require('../lib/utils');
-const User = require('../lib/user');
 
 exports.onJoin = (ws, params, cb) => {
     const { name, groupId } = params;

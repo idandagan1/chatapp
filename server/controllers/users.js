@@ -1,4 +1,3 @@
-const { createMsg } = require('../lib/utils');
 const User = require('../lib/user');
 
 exports.onLogin = (io, uid, username, cb) => {
