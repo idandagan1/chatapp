@@ -1,0 +1,32 @@
+.list-group-item {
+    border: none !important;
+    background: none !important;
+    border-radius: 4px;
+}
+
+.list-group-item:hover {
+    cursor: pointer;
+}
+
+.sidebar-wrapper {
+    border: #D8D8D8 solid 1px;
+    height: 100%;
+    float: left;
+    background: white;
+}
+
+.sidebar-wrapper h4 {
+    text-align: center;
+    padding: 10px;
+    text-decoration: underline;
+}
+
+.active {
+    background-color: #007bff !important;
+}
+
+.user-icon {
+    height: auto;
+    width: 20px;
+    margin: 0px 10px;
+}

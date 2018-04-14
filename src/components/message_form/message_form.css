@@ -1,0 +1,16 @@
+.msg-form-wrapper {
+    padding: 0;
+    top: 0;
+}
+
+.msg-form-wrapper h3, h5 {
+    padding: 20px;
+}
+
+.form-row {
+    margin: 0px;
+}
+
+.welcome {
+    text-align: center;
+}

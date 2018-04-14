@@ -1,0 +1,26 @@
+.msg-wrapper {
+    padding: 8px;
+}
+
+.list-msg-item {
+    list-style-type: none;
+    border-radius: 6px !important;
+    margin: 10px 0px;
+}
+
+.list-msg-item:nth-child(odd) {
+    background-color: #F5F5DC;
+}
+
+.list-msg-item:nth-child(even) {
+    background-color: white;
+}
+
+.msg-date {
+    color: gray;
+    font-size: 13px;
+}
+
+.msg-author {
+    color: #28a745;
+}
