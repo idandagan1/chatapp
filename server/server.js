@@ -6,7 +6,10 @@ const path = require('path');
 
 const app = express();
 const server = http.createServer(app);
-const port = process.env.PORT || 8080;
+const isProd = process.env.NODE_ENV === 'production';
+const port = isProd ?
+    +(process.env.PORT || 8080) + +process.env.NODE_APP_INSTANCE
+    : 8080;
 
 app.use(express.static(path.join(__dirname, '../public')));
 
