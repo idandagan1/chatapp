@@ -5,15 +5,15 @@ import Login from '../login/login';
 import Sidebar from '../sidebar/sidebar';
 import Messages from '../messages/messages';
 import MessageForm from '../message_form/message_form';
+import config from '../../config';
 import './app.css';
 
 export default class App extends Component {
 
   constructor() {
     super()
-    
     this.state = {
-      socket: io('http://localhost:8000'),
+      socket: io(config.endpoint),
       isLogged: false,
       activeUser: '',
       selected: '',
