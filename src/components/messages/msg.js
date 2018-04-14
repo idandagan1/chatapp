@@ -7,9 +7,7 @@ export default class Message extends Component {
         const { isGroup, src: { name }, msg, date } = this.props;
         return(
                 <div className='col-md-12 msg-wrapper'>
-                    {
-                        isGroup ? <h4 className='msg-author'>{name}</h4> : null
-                    }
+                    <h4 className='msg-author'>{name}</h4>
                     <div>
                         <span>{msg}</span>
                     </div>

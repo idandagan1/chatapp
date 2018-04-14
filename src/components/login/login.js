@@ -36,11 +36,11 @@ export default class Login extends Component {
                         <input
                             type='text'
                             className='form-control'
-                            placeholder='Enter your username'
+                            placeholder='Enter your nickname'
                             onChange={(e) => this.handleChange(e, 'username')}
                             required
                         />
-                        <small className='form-text text-muted'>username will be visible to all users.</small>
+                        <small className='form-text text-muted'>nickname will be visible to all users.</small>
                     </div>
                     <button type='submit' className='btn btn-primary'>Login</button>
                 </form>
