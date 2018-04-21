@@ -1,6 +1,6 @@
 {
-  "name": "chatapp",
-  "version": "0.1.0",
+  "name": "server",
+  "version": "1.1.0",
   "private": true,
   "dependencies": {
     "debug": "^3.1.0",

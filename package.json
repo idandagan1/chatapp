@@ -1,5 +1,6 @@
 {
     "name": "chatapp",
+    "version": "1.0.0",
     "description": "Simple chat app using docker-compose, pm2, socket-io, node.js and react"
 }
   
