@@ -1,6 +1,6 @@
 /* global beforeEach, afterEach, it, describe */
 const expect = require('expect.js');
-const User = require('../server/lib/user');
+const User = require('../lib/user');
 
 describe('User', () => {
 

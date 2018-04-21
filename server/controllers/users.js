@@ -1,4 +1,5 @@
 const User = require('../lib/user');
+const debug = require('debug')('user');
 
 exports.onLogin = (io, uid, username, cb) => {
 
@@ -9,7 +10,7 @@ exports.onLogin = (io, uid, username, cb) => {
     const activeUser = User(uid, username);
     const users = User.getUsers();
 
-    console.log(`${username} logged in`);
+    debug(`${username} logged in`);
     io.sockets.emit('joined', users[uid]);
 
     cb(null, users, activeUser);
@@ -17,5 +18,6 @@ exports.onLogin = (io, uid, username, cb) => {
 
 exports.onLogout = (io, uid) => {
     User.logout(uid);
+    debug(`${uid} logged out`);
     io.sockets.emit('logout', User.getUsers());
 }

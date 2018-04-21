@@ -3,7 +3,7 @@ const dev = {
 };
   
 const prod = {
-    endpoint: `${process.env.ENDPOINT}:${process.env.PORT}`
+    endpoint: `http://${process.env.ENDPOINT}:${process.env.PORT}`
 };
 
 const config = process.env.NODE_ENV === 'production'

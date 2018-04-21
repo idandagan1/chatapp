@@ -19,7 +19,6 @@ exports.getUserById = (uid) => {
 }
 
 exports.logout = (uid) => {
-    console.log(`${uid} logging out`);
     delete users[uid];
 }
 

@@ -1,16 +1,27 @@
 const socketIO = require('socket.io');
+const debug = require('debug')('websockets');
 const { onMessage } = require('./controllers/messages');
 const { onLogin, onLogout, } = require('./controllers/users');
 const { onJoin } = require('./controllers/groups');
+const redis = require('socket.io-redis');
 
-module.exports = (server) => {
+module.exports = (server, isProd) => {
     
     const io = socketIO(server);
+
+    if (isProd) {
+        const { 
+            REDIS_HOST: host,
+            REDIS_PORT: port,
+            REDIS_PASSWORD: password
+        } = process.env;
+        io.adapter(redis({ host, port, password }));
+    }
 
     io.on('connection', (socket) => {
 
         const { id: uid } = socket;
-        console.log(`${uid} connected`);
+        debug(`${uid} connected`);
 
         // user events
         socket.on('login', (username, cb) => {
@@ -19,6 +30,7 @@ module.exports = (server) => {
         });
 
         socket.on('disconnect', () => {
+            debug(`${uid} disconnected`);
             onLogout(io, uid);
         });
 
@@ -34,7 +46,7 @@ module.exports = (server) => {
 
         // other events
         socket.on('error', e => {
-            console.error(e);
+            debug(e);
         });
       
     });

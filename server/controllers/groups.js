@@ -1,3 +1,4 @@
+const debug = require('debug')('groups');
 
 exports.onJoin = (ws, params, cb) => {
     const { name, groupId } = params;
@@ -8,7 +9,7 @@ exports.onJoin = (ws, params, cb) => {
 
     ws.join(groupId);
 
-    console.log(`${name} joined the group ${groupId}`);
+    debug(`${name} joined the group ${groupId}`);
 
     cb(null, groupId);
 }

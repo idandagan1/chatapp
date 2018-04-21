@@ -1,5 +1,5 @@
 # Chat App
-Simple app for chatting
+Simple chat app using docker-compose, pm2, socket-io, node.js and react
 
 ### Clone
 1. clone the repo `git clone https://github.com/idandagan1/chatapp.git`
@@ -13,15 +13,18 @@ Simple app for chatting
 + `npm run coverage`
 
 ### Development
-* Run:
+#### Build client:
+inside client folder run:
 + `npm i`
 + `npm start`
-    + Starts Webpack Dev Server on port 3000
+    + Client starts webpack on port 3000
+#### Build server:
+inside server folder run:
++ `npm i`
 + open another terminal and run
-    + `npm run server`
++ `npm run start:dev`
     + Server listening on port 8080
 
 ### Production
 * Run:
-+ `npm run build`
-    + Builds the UI into a /build folder
++ `docker-compose up`
