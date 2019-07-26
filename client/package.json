@@ -4,15 +4,16 @@
   "private": true,
   "dependencies": {
     "moment": "^2.22.0",
-    "react": "^16.3.1",
-    "react-dom": "^16.3.1",
-    "react-scripts": "1.1.4",
-    "serve": "^7.0.0",
+    "snyk": "^1.199.2",
     "socket.io-client": "^2.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
-    "serve": "serve -s build",
-    "build": "react-scripts build"
-  }
+    "server": "node server.js",
+    "serve": "serve --port=8080 -s build",
+    "build": "react-scripts build",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
+  },
+  "snyk": true
 }
