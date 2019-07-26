@@ -12,6 +12,7 @@
     "server": "node server.js",
     "serve": "serve --port=8080 -s build",
     "build": "react-scripts build",
+    "snyk:test": "snyk test",
     "snyk-protect": "snyk protect",
     "prepare": "npm run snyk-protect"
   },
